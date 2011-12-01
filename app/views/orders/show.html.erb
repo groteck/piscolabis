@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<table>
+  <% for item in @order.line_items %>
+  <tr>
+    <td><%= item.quantity %>&times;</td>
+    <td><%= item.product.title %></td>
+    <td class="item_price"><%= number_to_currency(item.total_price) %></td>
+  </tr>
+<% end %>
+
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
+  </tr>
+</table>
+
+
+<%= button_to 'Delete order', @order, :method => :delete,
+:confirm => 'Are you sure?' %>

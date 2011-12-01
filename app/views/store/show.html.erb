@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag(@store_product.image_url) %>
+</p>
+
+<p>
+  <%= @store_product.title %>
+</p>
+
+<p>
+  <b><%= @store_product.description %></b>
+
+<p>
+  <b>Price:</b>
+  <%= @store_product.price %>€ 
+  <%= button_to 'Add to Order', line_items_path(:product_id => @store_product) %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @store_product.type.name %>
+</p>
+
+<%= link_to 'Back', root_path %>
+
+<%=render 'categories'%>

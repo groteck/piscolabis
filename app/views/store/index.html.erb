@@ -1,0 +1,33 @@
+<%if @store_products %>
+<div id="products">
+<% @store_products.each do |product| %>
+  <% if product %>
+    <div class="image" >
+      <%= image_tag(product.image_url)%>
+    </div>
+    <div class=title>
+      <%= product.title %>
+    </div>
+    <div class="description">
+      <%= product.description %>
+    </div>
+    <div class="price">
+      <%= product.price %>€
+      <%= button_to 'Add to Order', line_items_path(:product_id => product) %>
+    </div>
+    <div class="type">
+      <%= product.type.name %>
+    </div>
+    <div class="links">
+      <%= link_to 'Show', store_path(product.id)%>
+    </div>
+  <%end%>
+<% end %>
+</div>
+<%else%>
+
+  <%= "We have no products available" %>
+
+<%end%>
+
+<%=render 'categories' %>
