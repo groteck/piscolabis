@@ -1,14 +1,16 @@
 <h1>Listing orders</h1>
 
 <table>
-  <tr>
+    <tr>
+    <th>id</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @orders.each do |order| %>
-  <tr>
+    <tr>
+    <td><%= order.id %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>

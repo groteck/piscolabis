@@ -1,0 +1,214 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*** CUERPO PRODUCTOS ***/
+
+#products {
+    float: left;
+    width: 980px;
+}
+
+#products_head {
+    float: left;
+    width: 980px;
+    height: 39px;
+    background: url(products_head.png);
+    position: relative;
+    font-family: "helveticaRd",helvetica,arial,sans-serif;
+}
+
+#products_head h1 {
+    float: left;
+    width: 960px;
+    color:#B80000;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-top: 4px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+#products_list{
+    float: left;
+    width: 950px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    background-color: #FFF;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+  float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.item_product_description p{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}#products_list{
+    float: left;
+    width: 950px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    background-color: #FFF;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    overflow: hidden;
+}
+
+}
+
+#products_footer {
+    float: left;
+    width: 980px;
+    height: 10px;
+    background: url(products_footer.png);
+    position: relative;
+    margin-bottom: 16px;
+}
+
+/*** VISTA DE PRODUCTOS ***/
+
+.view_products {
+    float: left;
+    width: 950px;
+    overflow: hidden;
+    position: relative;
+}
+
+.item_product {
+    float: left;
+    width: 178px;
+    margin-right: 15px;
+}
+.item-product.ultima {
+    margin-right: 0px;
+}
+.item_product_image {
+    float: left;
+    width: 178px;
+    height: 237px;
+    position: relative;
+
+}
+.item_product_text {
+    float: right;
+    width: 178px;
+    font-size: 11px;
+    font-family: "helveticaRd",helvetica,arial,sans-serif;
+}
+.item_product_text h2 {
+    font-size: 15px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    color:#B80000;
+    float: left;
+    width: 100%;
+}
+.item_product_title {
+    height: auto!important;
+    min-height: 160px;
+}
+.item_product_description {
+    width: 100%;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.item_product_description p{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}#products_list{
+    float: left;
+    width: 950px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    background-color: #FFF;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    overflow: hidden;
+}
+
+	
+/*** PRECIO ***/
+
+.price {
+  width:89px;
+  float: left;
+}
+
+.price_center {
+    float:left;
+    margin:0;
+    padding: 0 0 0 10px;
+ }
+    margin-right: 15px;
+}
+.item-product.ultima {
+    margin-right: 0px;
+}
+.item_product_image {
+    float: left;
+    width: 178px;
+    height: 237px;
+    position: relative;
+
+}
+.item_product_text {
+    float: right;
+    width: 178px;
+    font-size: 11px;
+    font-family: "helveticaRd",helvetica,arial,sans-serif;
+}
+.item_product_text h2 {
+    font-size: 15px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    color:#B80000;
+    float: left;
+    width: 100%;
+}
+.item_product_title {
+    height: auto!important;
+    min-height: 160px;
+}
+.item_product_description {
+    width: 100%;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.item_product_description p{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}#products_list{
+    float: left;
+    width: 950px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    background-color: #FFF;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    overflow: hidden;
+}
+
+	
+/*** PRECIO ***/
+
+.price {
+  width:89px;
+  float: left;
+}
+
+.price_center {
+    float:left;
+    margin:0;
+    padding: 0 0 0 10px;
+ }

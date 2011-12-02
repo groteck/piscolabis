@@ -6,28 +6,22 @@
  *= require_tree . 
  */
 /**** Codigo mio ^^ ****/
-.body_full{
- margin: 0, auto;
- width:100%;
-}
-
-#head, #body, #footer {
-  margin: 0 auto;
-  width: 980px;
- }
 
 #logo {
+    position: absolute;
     top: 0px;
     width: 980px;
     height: 105px;
     float: left;
     background-image: url(logo.png);}
 
+#head, #body, #footer {
+    margin: 0 auto;
+    width: 980px;
+}
 #body {
     padding-top: 16px;
 }
-#yield {
-    background-color: #FFF;}
 
 #head {
     position: relative;
@@ -35,13 +29,9 @@
 }
 
 ul.hmenu li{
-    font-color: #880000;
     display: inline;
     float: right;
     margin: 10px;
-    font-family: "helveticaRd",helvetica,arial,sans-serif;
-    font-size: 15px;
-    font-weight: bold;
 }
 
 
@@ -161,8 +151,9 @@ ul.hmenu li{
 
 /*** CUERPO PRODUCTOS ***/
 
-#content {
-    margin 0, auto;
+#products {
+    float: left;
+    width: 980px;
 }
 
 #products_head {
@@ -185,7 +176,7 @@ ul.hmenu li{
     font-size: 15px;
 }
 
-#products_list, #yield{
+#products_list{
     float: left;
     width: 950px;
     padding-left: 14px;

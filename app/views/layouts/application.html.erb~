@@ -11,20 +11,23 @@
 	<div id="head">
 		<div id="logo">
 			<ul class="hmenu">
-                <li>
-                    <%= render 'users/menu/registration_items' %>
-                    <%= render 'users/menu/login_items' %>
+				<li>
+					<%= render 'users/menu/registration_items' %>
+					<%= render 'users/menu/login_items' %>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<div id="body">
 		<%= render 'menu/menu_principal' %>
-        <div id="content"> 
-            <%= render 'template/body' %>
-            <div id="products_footer"></div> 
-        </div>
+		<div id="content">
+			<div id="products_head">
+				<h1 id="prod_text">Nuestros Productos - Piscos</h1>
+			</div>
+			<%= yield %>
+		</div>
 	</div>
+	<div id="products_footer"></div>
 	<div id="footer">
 		<div id="footer_image">
 			<div id="footer_text">

@@ -10,4 +10,14 @@ class ApplicationController < ActionController::Base
       session[:order_id] = order.id
       order
   end
+  def current_user_admin
+      if current_user == nil
+         redirect_to root_path
+      else
+            if current_user.admin != 'true'
+                redirect_to root_path
+            end
+      end
+  end
+  helper_method :current_user_admin
 end

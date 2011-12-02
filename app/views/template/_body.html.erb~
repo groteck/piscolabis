@@ -1,0 +1,7 @@
+<div id="products">
+	<div id="products_head">
+		<h1 id="prod_text">Nuestros Productos - Piscos</h1>
+	</div>
+		<%= yield %>
+</div>
+<div id="products_footer"></div>
