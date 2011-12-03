@@ -3,9 +3,9 @@ Piscolabis::Application.routes.draw do
 
   resources :ugroupes
 
-  resources :user_administration
-
   resources :line_items
+
+  resources :user_administration
 
   resources :orders
 

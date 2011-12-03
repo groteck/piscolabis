@@ -1,42 +1,23 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
+<%= form_for(@my_user) do |f| %>
+  <% if @my_user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@my_user.errors.count, "error") %> prohibited this ugroupe from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+      <% @my_user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-  <div class="field"><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div class="field"><%= f.label :first_name %><br />
-  <%= f.text_field :first_name %></div>
-
-  <div class="field"><%= f.label :second_name %><br />
-  <%= f.text_field :second_name %></div>
-
-  <div class="field"><%= f.label :adress %><br />
-  <%= f.text_field :adress %></div>
-
-  <div class="field"><%= f.label :phone %><br />
-  <%= f.text_field :phone %></div>
-
-  <div class="field"><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div class="field"><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
 
   <div class="field">
     <%= f.label :ugroupe_id %><br />
-    <%= select("ugroupe", "ugroupe_id", 
-        Type.all.collect {|p| [ p.name, p.id ] },
+    <%= select("user", "ugroupe_id", 
+        Ugroupe.all.collect {|p| [ p.name, p.id ] },
         {:include_blank => 'Select type'})%>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

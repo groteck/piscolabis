@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20111203132655) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "ugroupe_id",             :limit => 255, :default => 0
+    t.integer  "ugroupe_id",             :limit => 255, :default => 3 , :null =>false
     t.string   "first_name"
     t.string   "second_name"
     t.string   "adress"
