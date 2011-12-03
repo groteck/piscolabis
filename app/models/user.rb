@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :second_name, :adress, :phone
 #  def create(attributes = nil, options = {}, &block)
 #    attributes.delete :admin
 #    unless User.last
@@ -13,4 +13,6 @@ class User < ActiveRecord::Base
 #    end
 #    super(attributes, options, &block)
 #  end
+
+  belongs_to :ugroupe
 end

@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
       if current_user == nil
          redirect_to root_path
       else
-            if current_user.admin != 'true'
+            if current_user.ugroupe_id != 1
                 redirect_to root_path
             end
       end

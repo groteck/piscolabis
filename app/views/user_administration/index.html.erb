@@ -1,0 +1,25 @@
+<h1> Listing Users </h1>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>email</th>
+        <th>grupo</th>
+    </tr>
+
+    <% @users.each do |user| %>
+        <tr>
+            <td><%= user.first_name%></td>
+            <td><%= user.second_name%></td>
+            <td><%= user.adress%></td>
+            <td><%= user.phone%></td>
+            <td><%= user.email%></td>
+            <td><%= user.ugroupe.name%></td>
+        </tr>
+    <% end%>
+</table>
+
+
