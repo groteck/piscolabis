@@ -1,33 +1,26 @@
 <div id="products_list">
 <%if @category.products.count != 0 %>
-<% @category.products.each do |product| %>
-        <div class="view_products">
-                <div class="item_product">
-                     <div class="item_product_image" >
-                             <%= image_tag(product.image_url)%>
-                     </div>
-                     <div class="item_product_text">
-                         <div class="item_product_title">
-                            <h2><%=product.type.name %> de <%= product.title %></h2>
-                            <div class="item_product_description">
-                                 <%= product.description %>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <div clase="price_center">
-                           Precio  <%= product.price %>€
-                           <% if user_signed_in? %> 
-                               <%= button_to 'Add to Order', line_items_path(:product_id => product) %>
-                        <%end%>
-                        </div>
-                         <div class="links">
-                             <%= link_to 'Show', store_path(product.id)%>
-                         </div>
-                     </div>
-                 </div>
-         </div>
- <%end%>
+    <% @category.products.each do |product| %>
+        <div class="item_product" class="<%= product.type.name%>">
+            <div class="item_product_image" >
+                <%= image_tag(product.image_url)%>
+            </div>
+            <div class="item_product_text">
+                <div class="item_product_title">
+                    <h2><%=product.type.name %> de <%= product.title %></h2>
+                </div>
+                <div class="item_product_description">
+                    <%= product.description %>
+                </div>
+            </div>
+            <div class="price">
+                Precio  <%= product.price %>€&nbsp;&nbsp;&nbsp; <%= link_to 'Show', store_path(product.id)%>
+            </div>
+            <%if user_signed_in? %> 
+                <%= button_to 'Add Order', line_items_path(:product_id => product) %>
+            <%end%>
+        </div> 
+    <%end%>
 <%else%>
          <%= "category without products" %>
 <%end%>

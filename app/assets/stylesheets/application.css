@@ -24,14 +24,13 @@
     background-image: url(logo.png);}
 
 #body {
-    padding-top: 16px;
+    padding-top: 10px;
 }
 #yield {
     background-color: #FFF;}
 
 #head {
-    position: relative;
-    height: 111px;
+    height: 105px;
 }
 
 ul.hmenu li{
@@ -46,26 +45,20 @@ ul.hmenu li{
 
 
 /*** MENU ***/
+
 #center_menu {
     position: relative;
     float: left;
     width: 100%;
-    height: 86px;
     display: block;
-    z-index: 25;
-}
-#menu {
-    position: absolute;
-    left: 0px;
-    top: 10px;
 }
 
 .item_menu {
-    position: relative;
     float: left;
     width: 150px;
     height: 54px;
     margin-right: 16px;
+    margin-bottom: 10px;
     font-size:14px;
 }
 
@@ -187,14 +180,10 @@ ul.hmenu li{
 
 #products_list, #yield{
     float: left;
-    width: 950px;
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 15px;
+    width: 975px;
+    padding-left: 5px;
     padding-bottom: 6px;
     background-color: #FFF;
-    border-left: 1px solid #E6E6E6;
-    border-right: 1px solid #E6E6E6;
     overflow: hidden;
 }
 
@@ -209,28 +198,20 @@ ul.hmenu li{
 
 /*** VISTA DE PRODUCTOS ***/
 
-.view_products {
-    float: left;
-    width: 950px;
-    overflow: hidden;
-    position: relative;
-}
-
 .item_product {
     float: left;
     width: 178px;
+    height: 350px;
     margin-right: 15px;
+    margin-top: 15px;
 }
-.item-product.ultima {
-    margin-right: 0px;
-}
-.item_product_image {
-    float: left;
-    width: 178px;
-    height: 237px;
-    position: relative;
 
+.item_product_image img {
+    float: center;
+    width: 178px;
 }
+
+
 .item_product_text {
     float: right;
     width: 178px;
@@ -245,33 +226,17 @@ ul.hmenu li{
     float: left;
     width: 100%;
 }
-.item_product_title {
-    height: auto!important;
-    min-height: 160px;
-}
+
 .item_product_description {
     width: 100%;
     float: left;
     padding-top: 5px;
-    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
-.item_product_description p{
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-	
-/*** PRECIO ***/
-
 .price {
-  width:89px;
-  float: left;
+    width: 100%;
+    margin-bottom: 10px;
 }
-
-.price_center {
-    float:left;
-    margin:0;
-    padding: 0 0 0 10px;
- }
 
 /*** FOOTER ***/
 #center_footer, #footer_image {
