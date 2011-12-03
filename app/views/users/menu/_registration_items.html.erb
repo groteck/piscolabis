@@ -1,6 +1,9 @@
 <% if user_signed_in? %>
   <li>
   <%= link_to('Edit registration', edit_user_registration_path) %>
+  <% if current_user.ugroupe_id == 1 %>
+        &nbsp;&nbsp;<%= link_to('Zona Admin', user_administration_path)%>
+  <%end%>
   </li>
 <% else %>
   <li>
