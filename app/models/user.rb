@@ -15,4 +15,6 @@ class User < ActiveRecord::Base
 #  end
 
   belongs_to :ugroupe
+  validates_presence_of :email, :password, :password_confirmation, :first_name, :second_name, :adress, :phone
+  validates :phone, :numericality => {:only_integer => true }
 end
