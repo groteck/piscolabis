@@ -9,7 +9,7 @@
         <th>email</th>
         <th>grupo</th>
     </tr>
-
+    <%if @users %>
     <% @users.each do |user| %>
         <tr>
             <td><%= user.first_name%></td>
@@ -20,6 +20,7 @@
             <td><%= user.ugroupe.name%></td>
         </tr>
     <% end%>
+<%end%>
 </table>
 
 

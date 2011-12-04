@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :second_name, :adress, :phone
+    attr_protected :ugroupe_id
 #  def create(attributes = nil, options = {}, &block)
 #    attributes.delete :admin
 #    unless User.last

@@ -1,5 +1,5 @@
 class UserAdministrationController < ApplicationController
-   
+    before_filter :current_user_admin
     def index
         @users = User.all
 =begin
