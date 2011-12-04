@@ -1,5 +1,6 @@
 Piscolabis::Application.routes.draw do
 
+  resources :corders
 
   resources :ugroupes
 

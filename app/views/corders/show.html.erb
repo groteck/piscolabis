@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <table>
-  <% for item in @order.line_items %>
+  <% for item in @corder.order.line_items %>
   <tr>
     <td><%= item.quantity %>&times;</td>
     <td><%= item.product.title %></td>
@@ -10,9 +10,8 @@
 
   <tr class="total_line">
     <td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
+    <td class="total_cell"><%= number_to_currency(@corder.order.total_price) %></td>
   </tr>
 </table>
 
-<%= button_to 'Confirm Order', corder_path(:order_id => @order) %>
-<%= button_to 'Delete order', @order, :method => :delete, :confirm => 'Are you sure?' %>
+<%= button_to 'Delete corder', @corder, :method => :delete, :confirm => 'Are you sure?' %>

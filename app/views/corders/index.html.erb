@@ -1,0 +1,23 @@
+<h1>Listing orders</h1>
+
+<table>
+    <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @corders.each do |corder| %>
+    <tr>
+    <td><%= corder.id %></td>
+    <td><%= link_to 'Show', corder %></td>
+    <td><%= link_to 'Edit', edit_corder_path(corder) %></td>
+    <td><%= link_to 'Destroy', corder, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_corder_path %>
