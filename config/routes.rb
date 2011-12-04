@@ -1,5 +1,5 @@
 Piscolabis::Application.routes.draw do
-
+  match 'cocinero' => 'corders#cocinero', :via => :get
   resources :corders
 
   resources :ugroupes

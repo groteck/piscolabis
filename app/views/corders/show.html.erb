@@ -1,17 +1,35 @@
-<p id="notice"><%= notice %></p>
+ <p id="notice"><%= notice %></p>
 <table>
-  <% for item in @corder.order.line_items %>
-  <tr>
-    <td><%= item.quantity %>&times;</td>
-    <td><%= item.product.title %></td>
-    <td class="item_price"><%= number_to_currency(item.total_price) %></td>
-  </tr>
-<% end %>
+<tr>
+  <th>Datos del cliente </th>
+  <th>Datos del pedido </th>
+</tr>
+<tr>
+  <td>
+    <b>Cliente</b>
+    <%=@corder.user.first_name + ' ' + @corder.user.second_name%></br>
+    <b>direccion de entrega:</b>
+    <%=@corder.user.adress%></br>
+    <b>Teléfono del domicilio<b>
+    <%=@corder.user.phone%></br>
+  </td>
+  <td>
+    <table>
+      <% for item in @corder.order.line_items %>
+      <tr>
+        <td><%= item.quantity %>&times;</td>
+        <td><%= item.product.title %></td>
+        <td class="item_price"><%= number_to_currency(item.total_price) %></td>
+      </tr>
+      <% end %>
 
-  <tr class="total_line">
-    <td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(@corder.order.total_price) %></td>
-  </tr>
+      <tr class="total_line">
+        <td colspan="2">Total</td>
+        <td class="total_cell"><%= number_to_currency(@corder.order.total_price) %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
 </table>
 
-<%= button_to 'Delete corder', @corder, :method => :delete, :confirm => 'Are you sure?' %>
+

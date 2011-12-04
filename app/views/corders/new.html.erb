@@ -1,5 +1,5 @@
-<h1>New order</h1>
-
+<h1>Confirm information:</h1>
+<%if @corder%>
 <%= form_for(@corder) do |f| %>
   <% if @corder.errors.any? %>
     <div id="error_explanation">
@@ -12,9 +12,43 @@
       </ul>
     </div>
   <% end %>
+ <p id="notice"><%= notice %></p>
+<table>
+<tr>
+  <th>Datos del cliente </th>
+  <th>Datos del pedido </th>
+</tr>
+<tr>
+  <td>
+    <b>Cliente</b>
+    <%=current_user.first_name + ' ' + current_user.second_name%></br>
+    <b>direccion de entrega:</b>
+    <%=current_user.adress%></br>
+    <b>Teléfono del domicilio<b>
+    <%=current_user.phone%></br>
+  </td>
+  <td>
+    <table>
+      <% for item in current_order.line_items %>
+      <tr>
+        <td><%= item.quantity %>&times;</td>
+        <td><%= item.product.title %></td>
+        <td class="item_price"><%= number_to_currency(item.total_price) %></td>
+      </tr>
+      <% end %>
+
+      <tr class="total_line">
+        <td colspan="2">Total</td>
+        <td class="total_cell"><%= number_to_currency(current_order.total_price) %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<%end%>
 <%= link_to 'Back', corders_path %>

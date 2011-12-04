@@ -1,5 +1,5 @@
 class Corder < ActiveRecord::Base
   belongs_to :user
   belongs_to :order
- :order
+  attr_accessible :user_id, :order_id, :finished
 end

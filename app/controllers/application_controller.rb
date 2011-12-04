@@ -19,5 +19,6 @@ class ApplicationController < ActionController::Base
             end
       end
   end
+  helper_method :current_order
   helper_method :current_user_admin
 end

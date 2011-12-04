@@ -14,6 +14,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @corder= Corder.new
     begin
       @order = Order.find(params[:id])
       rescue ActiveRecord::RecordNotFound
