@@ -1,9 +1,17 @@
 <div id="products_list">
+<%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
+  <%= f.label :title_contains %>
+  <%= f.text_field :title_contains %><%= f.submit %>
+<% end %>
 <%if @store_products %>
 <% @store_products.each do |product| %>
                 <div class="item_product" class="<%= product.type.name%>">
                      <div class="item_product_image" >
+                          <%if product.image_url %>
+                             <%= image_tag(product.image.url)%>
+                          <%else%>
                              <%= image_tag(product.image_url)%>
+                          <%end%>
                      </div>
                      <div class="item_product_text">
                          <div class="item_product_title">

@@ -2,6 +2,9 @@ Piscolabis::Application.routes.draw do
 
   resources :vista_admin
 
+  match 'cocinero' => 'corders#cocinero', :via => :get
+  resources :corders
+
   resources :ugroupes
 
   resources :line_items

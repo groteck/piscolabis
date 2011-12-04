@@ -1,0 +1,22 @@
+<h1>Listing orders</h1>
+
+<table>
+    <tr>
+    <th>Num Pedido</th>
+    <th>Ver Pedido</th>
+    <th>Finalizar Pedido</th>
+    <th>Cancelar Pedido</th>
+  </tr>
+<% if @corders %>
+<% @corders.each do |corder| %>
+    <tr>
+    <td><%= corder.id %></td>
+    <td><%= link_to 'Show', corder %></td>
+    <td><%= form_for corder do |c|%>
+        <%= c.submit%><%end%>
+    </td>
+    <td><%= link_to 'Destroy', corder, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+<%end%>
+</table>

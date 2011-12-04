@@ -23,7 +23,12 @@ gem 'jquery-rails'
 
 # Use unicorn as the web server
 gem 'unicorn'
+# Manage Users
 gem 'devise'
+# Upload images
+gem "paperclip", "~> 2.4"
+# Search products
+gem "meta_search"
 # Deploy with Capistrano
 # gem 'capistrano'
 

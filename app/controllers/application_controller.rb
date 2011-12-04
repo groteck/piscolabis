@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
             end
       end
   end
+<<<<<<< HEAD
   def current_user_cooker
       if current_user == nil
           redirect_to root_path
@@ -32,6 +33,9 @@ class ApplicationController < ActionController::Base
           end
       end
   end
+=======
+  helper_method :current_order
+>>>>>>> fraire
   helper_method :current_user_admin
   helper_method :current_user_cooker
 end

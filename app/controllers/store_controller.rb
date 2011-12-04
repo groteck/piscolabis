@@ -1,6 +1,7 @@
 class StoreController < ApplicationController
   def index
-    @store_products = Product.find(:all)
+    @search = Product.search(params[:search])
+    @store_products = @search.all
     @categories = Type.all
   end
   def show

@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
   has_many :line_items, :dependent => :destroy
-
+  has_one :corder
   def add_product(product_id)
     current_item = line_items.where(:product_id => product_id).first
     if current_item
