@@ -1,5 +1,6 @@
 Piscolabis::Application.routes.draw do
 
+  resources :vista_admin
 
   resources :ugroupes
 

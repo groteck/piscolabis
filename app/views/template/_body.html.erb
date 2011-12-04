@@ -1,4 +1,9 @@
-	<div id="products_head">
-		<h1 id="prod_text">Nuestros Productos - Piscos</h1>
-	</div>
-    <div id="yield"><%= yield %></div>
+<div id="products_head">
+	<h1 id="prod_text">Nuestros Productos - Piscos</h1>
+</div>
+<%if user_signed_in?  %>
+    <% if current_user.ugroupe_id == 1%>
+        <%=render 'vista_admin/menu_admin'%>
+    <%end%>
+<%end%>
+<div id="yield"> <%= yield %> </div>

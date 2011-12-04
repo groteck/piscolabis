@@ -1,0 +1,2 @@
+module VistaAdminHelper
+end

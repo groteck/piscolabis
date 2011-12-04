@@ -3,7 +3,7 @@
 <head>
   <title>Piscolabis</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery", "rails", "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,8 +18,8 @@
 			</ul>
 		</div>
 	</div>
-	<div id="body">
-		<%= render 'menu/menu_principal' %>
+    <div id="body">
+            <%= render 'menu/menu_principal' %>
         <div id="content"> 
             <%= render 'template/body' %>
             <div id="products_footer"></div> 

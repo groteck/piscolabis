@@ -32,6 +32,9 @@
 #head {
     height: 105px;
 }
+.hmenu{
+    color: green;
+}
 
 ul.hmenu li{
     font-color: #880000;
@@ -43,115 +46,68 @@ ul.hmenu li{
     font-weight: bold;
 }
 
+.hmenu a.hover {
+    color: green;
+}
 
+.hmenu a{
+    color: #880000;}
 /*** MENU ***/
 
-#center_menu {
-    position: relative;
-    float: left;
+#menu {
     width: 100%;
-    display: block;
-}
-
-.item_menu {
-    float: left;
-    width: 150px;
-    height: 54px;
-    margin-right: 16px;
-    margin-bottom: 10px;
-    font-size:14px;
-}
-
-.menu {
-    display: block;
-    width: 99px;
-    padding-left: 41px;
-    padding-right: 10px;
-    background-image: url(menu.png);
+    height:52px;
     font-weight: bold;
     font-size:14px;
     font-family: "helveticaRd",helvetica,arial,sans-serif;
 }
 
-#cat_1 a.menu, #cat_2 a.menu, #cat_3 a.menu, #cat_4 a.menu, #cat_5 a.menu, #cat_6 a.menu {
-    height: 36px;
-    padding-top: 18px;
-    color:#B80000;
-
-}
-#cat_1  a.menu:hover, #cat_2  a.menu:hover, #cat_3  a.menu:hover, #cat_4  a.menu:hover, #cat_5  a.menu:hover, #cat_6 a.menu:hover {
-    color: #FFF;
-}
-#cat_1 a.menu {
-    background-position: 0px 0px;
-    width: 92px;
-    padding-left: 48px;
-    padding-right: 10px;
-}
-#cat_1 a.menu:hover {
-    background-position: 0px -56px;
+.cat {
+    background-image: url(menucito.png);
+    background-repeat: no-repeat;
+    float:left;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 52px;
+    text-align:center;
+    line-height:50px;
 }
 
-#cat_2 a.menu {
-
-    height: 36px;
-    padding-top: 18px;
-    background-position: -166px 0px;
-    width: 92px;
-    padding-left: 48px;
-    padding-right: 10px;
-}
-#cat_2 a.menu:hover {
-    background-position: -166px -56px;
-    color: #FFF;
+#cat{
+    background-image: url(menucito.png);
+    background-repeat: no-repeat;
+    float:left;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 52px;
+    text-align:center;
+    line-height:50px;
 }
 
-#cat_3 a.menu {
-    background-position: -332px 0px;
-    width: 101px;
-    padding-left: 46px;
-    padding-right: 4px;
-}
-#cat_3 a.menu:hover {
-    background-position: -332px -56px;
-}
-#cat_4 a.menu {
-    background-position: -498px 0px;
-    padding-left: 48px;
-    padding-right: 10px;
-    width: 92px;
-}
-#cat_4 a.menu:hover {
-    background-position: -498px -56px;
+#menu a:hover {
+    color: green;
 }
 
-#cat_5 a.menu {
-    background-position: -664px 0px;
-    width: 92px;
-    padding-left: 48px;
-    padding-right: 10px;
-}
-#cat_5 a.menu:hover {
-    background-position: -664px -56px;
-
+#menu a{
+    color: #880000;
 }
 
-#cat_6 {
-    float: right;
-    margin-right: 0;
-
+#admin_menu{
+    float:left;
+    width:100%;
+    background-color: #FFF;
 }
-
-#cat_6 a.menu {
-    background-position: -830px 0;
-    padding-left: 48px;
-    padding-right: 10px;
-    width: 92px;
+.admin_cat {
+    float: left;
+    height:20px;
+    padding-top: 5px;
 }
-#cat_6 a.menu:hover {
-    background-position: -830px -56px;
+.admin_cat a {
+    padding-left:10px;
+    padding-right:5px;
 }
-
 /*** CUERPO PRODUCTOS ***/
 
 #content {

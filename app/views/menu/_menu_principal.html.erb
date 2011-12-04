@@ -1,10 +1,8 @@
-<div id="center_menu">
 	<div id="menu">
-		<div id="cat_1" class="item_menu"><a class="menu" href="/categories/2">Piscos</a></div>
-		<div id="cat_2" class="item_menu"><a class="menu" href="/categories/3">Rollitos</a></div>
-		<div id="cat_3" class="item_menu"><a class="menu" href="/categories/1">Pulga y Bocata</a></div>
-		<div id="cat_4" class="item_menu"><a class="menu" href="/categories/4">Bombón</a></div>
-		<div id="cat_5" class="item_menu"><a class="menu" href="/categories/5">Dulces</a></div>
-		<div id="cat_6" class="item_menu"><a class="menu" href="/categories/6">Catering</a></div>
-	</div>
-</div>
+        <div id="cat"> <%=link_to 'Todo', root_path, :class => "Todo" %></div>
+            <% if @categories %>
+                <% @categories.each do |c| %>
+                    <div class="cat"><%= link_to c.name, category_path(c),:class => c.name%> </div> 
+                <%end%>
+            <%end%>
+        </div>
