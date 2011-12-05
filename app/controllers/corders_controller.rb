@@ -1,5 +1,6 @@
 class CordersController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only => [ :show, :create, :new ]
+  before_filter :current_user_cooker, :only => [ :cocinero, :update, :destroy ]
   # GET /orders
   # GET /orders.json
   def index

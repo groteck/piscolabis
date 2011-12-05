@@ -1,6 +1,8 @@
-<h1>Editing User</h1>
+<% content_for :cabecera do%>
+  Editing User
+<%end%>
 
 <%= render 'form' %>
 
 <%= link_to 'Show',user_administration_path(@my_user) %>
-<%= link_to 'Back', user_administration_path %>
+<%= link_to 'Back', user_administration_url %>

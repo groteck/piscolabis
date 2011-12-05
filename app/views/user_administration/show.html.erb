@@ -1,1 +1,20 @@
-<%= @my_user.ugroupe.name %>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Second Name</th>
+    <th>Email</th>
+    <th>Adress</th>
+    <th>Group</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><%= @my_user.first_name %></td>
+    <td><%= @my_user.second_name %></td>
+    <td><%= @my_user.email %></td>
+    <td><%= @my_user.adress %></td>
+    <td><%=@my_user.ugroupe.name %></td>
+    <td><%= link_to 'Edit', edit_user_administration_path(@my_user) %></td>
+    <td><%= link_to 'Destroy', user_administration_path(@my_user), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+</table>

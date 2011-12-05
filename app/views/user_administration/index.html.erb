@@ -1,4 +1,6 @@
-<h1> Listing Users </h1>
+<% content_for :cabecera do%>
+  Listing Users
+<%end%>
 
 <table>
     <tr>
@@ -18,6 +20,10 @@
             <td><%= user.phone%></td>
             <td><%= user.email%></td>
             <td><%= user.ugroupe.name%></td>
+            <td><%= link_to 'Edit', edit_user_administration_path(user) %></td> 
+            <td><%= link_to 'Show',user_administration_path(user)%></td>
+            <td><%= link_to 'Destroy', user_administration_path(user), confirm: 'Are you sure?', method: :delete %></td>
+
         </tr>
     <% end%>
 <%end%>

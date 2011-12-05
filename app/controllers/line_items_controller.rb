@@ -1,5 +1,6 @@
 class LineItemsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [ :index, :show ]
+  before_filter :current_user_admin, :only => [ :index, :show ]
   # GET /line_items
   # GET /line_items.json
   def index

@@ -1,3 +1,6 @@
+<% content_for :cabecera do%>
+  Productos
+<%end%>
 <div id="products_list">
 <%if @category.products.count != 0 %>
     <% @category.products.each do |product| %>

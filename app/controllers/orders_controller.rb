@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only => [ :show, :create, :update, :destroy ]
+  before_filter :current_user_admin, :only => [ :index ]
   # GET /orders
   # GET /orders.json
   def index

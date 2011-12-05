@@ -1,12 +1,12 @@
 <div id="products_head">
-	<h1 id="prod_text">Nuestros Productos - Piscos</h1>
+    <h1 id="prod_text"><%= yield :cabecera %></h1>
 </div>
 <%if user_signed_in?  %>
     <% if current_user.ugroupe_id == 1%>
         <%=render 'vista_admin/menu_admin'%>
     <%end%>
     <%if current_user.ugroupe_id == 2%>
-        <%=render 'vista_admin/menu_admin'%>
+        
     <%end%>
 <%end%>
 <div id="yield"> <%= yield %> </div>

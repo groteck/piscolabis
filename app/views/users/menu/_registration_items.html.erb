@@ -1,6 +1,9 @@
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Edit registration', edit_user_registration_path, :class => "edit_reg") %>
+  <%= link_to('Edit registration', edit_user_registration_path) %>
+  <% if current_user.ugroupe_id == 2 %>
+      &nbsp;&nbsp;&nbsp; <%= link_to('Pedidos', :action=>"cocinero", :controller=>"corders") %>
+  <%end%>
   </li>
 <% else %>
   <li>

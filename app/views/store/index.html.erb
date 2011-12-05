@@ -1,3 +1,6 @@
+<% content_for :cabecera do%>
+  Nuestros Productos
+<%end%>
 <div id="products_list">
 <%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
   <%= f.label :title_contains %>

@@ -1,4 +1,7 @@
-<h1>Confirm information:</h1>
+<% content_for :cabecera do%>
+  Confirm Information
+<%end%>
+
 <%if @corder%>
 <%= form_for(@corder) do |f| %>
   <% if @corder.errors.any? %>
