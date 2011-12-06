@@ -10,15 +10,15 @@
 <% @store_products.each do |product| %>
                 <div class="item_product" class="<%= product.type.name%>">
                      <div class="item_product_image" >
-                          <%if product.image_url %>
-                             <%= image_tag(product.image.url)%>
-                          <%else%>
-                             <%= image_tag(product.image_url)%>
+                          <%if product.image.url == "/images/original/missing.png" %>
+                            <%= image_tag(product.image_url)%>
+                          <%else %>
+                            <%= image_tag(product.image.url)%>
                           <%end%>
                      </div>
                      <div class="item_product_text">
                          <div class="item_product_title">
-                            <h2><%=product.type.name %> de <%= product.title %></h2>
+                            <h2><%= product.title %></h2>
                         </div>
                         <div class="item_product_description">
                             <%= product.description %>
@@ -37,4 +37,7 @@
   <%= "We have no products available" %>
 
 <%end%>
+
 </div>
+<%= will_paginate @store_products %>
+

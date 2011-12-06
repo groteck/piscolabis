@@ -21,7 +21,11 @@ class CordersController < ApplicationController
   end
 
   def show
+  
     @corder = Corder.find(params[:id])
+    unless @corder.user_id != current_user.id or current_user.ugroupe_id < 2
+      redirect_to root_path, notice: 'Estos no son los productos que buscas.'
+    end
   end
 
   # GET /orders/new

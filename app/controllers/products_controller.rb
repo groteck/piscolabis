@@ -45,9 +45,17 @@ class ProductsController < ApplicationController
        params[:product][:image_url] = "nodisponible.jpg"
     end
     @product = Product.new(params[:product])
-
+  
     respond_to do |format|
       if @product.save
+        if params[:delete_file] == 1
+          @product.image_file_name = nil
+          @product.image_content_type = nil
+          @product.image_file_size = nil
+          @product.image_updated_at = nil
+          @product.save
+        end
+
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
       else
@@ -67,6 +75,13 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.update_attributes(params[:product])
+        if params[:delete_file] == 1 or params[:product][:image_url] != "nodisponible.jpg"  
+           @product.image_file_name = nil
+           @product.image_content_type = nil
+           @product.image_file_size = nil
+           @product.image_updated_at = nil
+           @product.save
+        end 
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { head :ok }
       else

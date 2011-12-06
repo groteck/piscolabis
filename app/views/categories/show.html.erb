@@ -2,15 +2,25 @@
   Productos
 <%end%>
 <div id="products_list">
+
+<%= form_for @search, :url => category_path(@category), :html => {:method => :get} do |f| %>
+  <%= f.label :title_contains %>
+  <%= f.text_field :title_contains %><%= f.submit %>
+<% end %>
+
 <%if @category.products.count != 0 %>
-    <% @category.products.each do |product| %>
+    <% @category_products.each do |product| %>
         <div class="item_product" class="<%= product.type.name%>">
             <div class="item_product_image" >
+              <%if product.image.url == "/images/original/missing.png" %>
                 <%= image_tag(product.image_url)%>
+              <%else %>
+                <%= image_tag(product.image.url)%>
+              <%end%>
             </div>
             <div class="item_product_text">
                 <div class="item_product_title">
-                    <h2><%=product.type.name %> de <%= product.title %></h2>
+                    <h2><%= product.title %></h2>
                 </div>
                 <div class="item_product_description">
                     <%= product.description %>
@@ -28,3 +38,5 @@
          <%= "category without products" %>
 <%end%>
 </div>
+<%= will_paginate @category_products %>
+
