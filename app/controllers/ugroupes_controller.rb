@@ -42,10 +42,9 @@ class UgroupesController < ApplicationController
   # POST /ugroupes.json
   def create
     @ugroupe = Ugroupe.new(params[:ugroupe])
-
     respond_to do |format|
       if @ugroupe.save
-        format.html { redirect_to @ugroupe, notice: 'Ugroupe was successfully created.' }
+        format.html { redirect_to ugroupes_path }
         format.json { render json: @ugroupe, status: :created, location: @ugroupe }
       else
         format.html { render action: "new" }

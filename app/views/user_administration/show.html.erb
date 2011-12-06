@@ -13,8 +13,8 @@
     <td><%= @my_user.second_name %></td>
     <td><%= @my_user.email %></td>
     <td><%= @my_user.adress %></td>
-    <td><%=@my_user.ugroupe.name %></td>
-    <td><%= link_to 'Edit', edit_user_administration_path(@my_user) %></td>
-    <td><%= link_to 'Destroy', user_administration_path(@my_user), confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= @my_user.ugroupe.name %></td>
+    <td><%= link_to 'Edit', edit_user_administration_path(@my_user), :class => 'esd' %></td>
+    <td><%= link_to 'Destroy', user_administration_path(@my_user), :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 </table>

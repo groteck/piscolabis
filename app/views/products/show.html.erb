@@ -28,6 +28,6 @@
   <%= @product.type_id %>
 </p>
 
-<%= link_to 'New Product', new_product_path %> |
-<%= link_to 'Edit Product', edit_product_path(@product) %> |
-<%= link_to 'All Product', products_path %>
+<%= link_to 'New Product', new_product_path, :class => 'esd' %> |
+<%= link_to 'Edit Product', edit_product_path(@product), :class => 'esd' %> |
+<%= link_to 'All Product', products_path, :class => 'esd' %>

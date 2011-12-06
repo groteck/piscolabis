@@ -23,6 +23,7 @@ class CordersController < ApplicationController
   def show
     @corder = Corder.find(params[:id])
   end
+
   # GET /orders/new
   # GET /orders/new.json
   def new

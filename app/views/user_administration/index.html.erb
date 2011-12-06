@@ -10,6 +10,9 @@
         <th>Telefono</th>
         <th>email</th>
         <th>grupo</th>
+        <th></th>
+        <th></th>
+        <th></th>
     </tr>
     <%if @users %>
     <% @users.each do |user| %>
@@ -20,9 +23,9 @@
             <td><%= user.phone%></td>
             <td><%= user.email%></td>
             <td><%= user.ugroupe.name%></td>
-            <td><%= link_to 'Edit', edit_user_administration_path(user) %></td> 
-            <td><%= link_to 'Show',user_administration_path(user)%></td>
-            <td><%= link_to 'Destroy', user_administration_path(user), confirm: 'Are you sure?', method: :delete %></td>
+            <td><%= link_to 'Edit', edit_user_administration_path(user), :class => 'esd' %></td> 
+            <td><%= link_to 'Show',user_administration_path(user), :class => 'esd'%></td>
+            <td><%= link_to 'Destroy', user_administration_path(user), :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
 
         </tr>
     <% end%>

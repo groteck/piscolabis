@@ -12,8 +12,8 @@
 <% @corders.each do |corder| %>
     <tr>
     <td><%= corder.id %></td>
-    <td><%= link_to 'Show', corder %></td>
-    <td><%= link_to 'Destroy', corder, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', corder, :class => 'esd' %></td>
+    <td><%= link_to 'Destroy', corder, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 <%end%>

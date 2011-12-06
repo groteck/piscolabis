@@ -12,13 +12,13 @@
 <% @ugroupes.each do |ugroupe| %>
   <tr>
     <td><%= ugroupe.name %></td>
-    <td><%= link_to 'Show', ugroupe %></td>
-    <td><%= link_to 'Edit', edit_ugroupe_path(ugroupe) %></td>
-    <td><%= link_to 'Destroy', ugroupe, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', ugroupe, :class => 'esd' %></td>
+    <td><%= link_to 'Edit', edit_ugroupe_path(ugroupe), :class => 'esd' %></td>
+    <td><%= link_to 'Destroy', ugroupe, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Ugroupe', new_ugroupe_path %>
+<%= link_to 'New Ugroupe', new_ugroupe_path, :class => 'esd' %>

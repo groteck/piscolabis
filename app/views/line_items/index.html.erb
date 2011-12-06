@@ -15,9 +15,9 @@
   <tr>
     <td><%= line_item.product_id %></td>
     <td><%= line_item.order_id %></td>
-    <td><%= link_to 'Show', line_item %></td>
-    <td><%= link_to 'Edit', edit_line_item_path(line_item) %></td>
-    <td><%= link_to 'Destroy', line_item, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', line_item, :class => 'esd' %></td>
+    <td><%= link_to 'Edit', edit_line_item_path(line_item), :class => 'esd' %></td>
+    <td><%= link_to 'Destroy', line_item, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

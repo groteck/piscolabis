@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div id="store">
 <p>
   <%= image_tag(@store_product.image_url) %>
 </p>
@@ -17,5 +17,5 @@
   <%if user_signed_in?%><%= button_to 'Add to Order', line_items_path(:product_id => @store_product) %><%end%>
 </p>
 
-<%= link_to 'Back', root_path %>
-
+<%= link_to 'Back', root_path, :class => 'esd' %>
+</div>

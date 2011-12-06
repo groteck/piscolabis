@@ -107,9 +107,27 @@ ul.hmenu li{
 .admin_cat a {
     padding-left:10px;
     padding-right:5px;
+    text-decoration: none;
+    color: #880000;
+}
+.admin_cat a:hover {
+    color: black;
 }
 /*** CUERPO PRODUCTOS ***/
-
+table {
+    width; 980px;
+    border-style:solid;
+    border;1px;
+margin-left:10px;
+margin-right:10px;
+}
+.esd {
+    text-decoration: none;
+    color: #880000;
+}
+.esd:hover {
+    color:black;
+}
 #content {
     margin 0, auto;
 }
@@ -192,6 +210,10 @@ ul.hmenu li{
 .price {
     width: 100%;
     margin-bottom: 10px;
+}
+
+#store {
+    margin-left: 20px;
 }
 
 /*** FOOTER ***/
