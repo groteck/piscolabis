@@ -1,21 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= image_tag(@store_product.image_url) %>
-</p>
-<p><b>Type:</b> <%= @store_product.type.name %> </p>
-<p>
-<%= @store_product.type.name %> de <%= @store_product.title %>
+  <%if @store_product.image.url == "/images/original/missing.png" %>
+    <%= image_tag(@store_product.image_url)%>
+  <%else %>
+    <%= image_tag(@store_product.image.url)%>
+  <%end%>
 </p>
 
 <p>
-  <b><%= @store_product.description %></b>
+  <%= @store_product.title %>
+</p>
 
+<p>
+  <%= @store_product.description %>
 <p>
   <b>Price:</b>
   <%= @store_product.price %>€ 
   <%if user_signed_in?%><%= button_to 'Add to Order', line_items_path(:product_id => @store_product) %><%end%>
 </p>
-
-<%= link_to 'Back', root_path %>
+<p><b>Category:</b> <%= @store_product.type.name %> </p>
+<%= link_to 'Back', :back %>
 

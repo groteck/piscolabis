@@ -5,8 +5,9 @@
     <% if current_user.ugroupe_id == 1%>
         <%=render 'vista_admin/menu_admin'%>
     <%end%>
-    <%if current_user.ugroupe_id == 2%>
-        
-    <%end%>
 <%end%>
-<div id="yield"> <%= yield %> </div>
+
+<div id="yield"> 
+  <div id="current_order"><%=(link_to 'Current order', order_path(current_order)) if current_order%> </div>
+  <%= yield %> 
+</div>
