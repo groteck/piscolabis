@@ -1,40 +1,54 @@
 <% content_for :cabecera do%>
   Nuestros Productos
 <%end%>
-<div id="products_list">
-<%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
-  <%= f.label :title_contains %>
-  <%= f.text_field :title_contains %><%= f.submit %>
-<% end %>
-<%if @store_products %>
-<% @store_products.each do |product| %>
-                <div class="item_product" class="<%= product.type.name%>">
-                     <div class="item_product_image" >
-                          <%if product.image.url == "/images/original/missing.png" %>
-                            <%= image_tag(product.image_url)%>
-                          <%else %>
-                            <%= image_tag(product.image.url)%>
-                          <%end%>
-                     </div>
-                     <div class="item_product_text">
-                         <div class="item_product_title">
-                            <h2><%= product.title %></h2>
-                        </div>
-                        <div class="item_product_description">
-                            <%= product.description %>
-                        </div>
-                    </div>
-                    <div class="price">
-                        Precio  <%= product.price %>€&nbsp;&nbsp;&nbsp; <%= link_to 'Show', store_path(product.id), :class => 'esd'%>
-                    </div>
-                    <%if user_signed_in? %> 
-                            <%= button_to 'Add Order', line_items_path(:product_id => product) %>
-                    <%end%>
-                 </div>
+<%content_for :search do%>
+    <%if current_user == nil or current_user.ugroupe_id != 1%>
+        <%= form_for @search, :url => products_path(@category), :html => {:method => :get} do |f| %>
+            <%= f.label :title_contains %>
+            <%= f.text_field :title_contains %><%= f.submit %>
+        <%end%>
+    <%end%>
 <%end%>
+
+
+<div id="products_list">
+    <%if  user_signed_in?%>
+        <%if current_user.ugroupe_id == 1%>
+                <%= form_for @search, :url => products_path(@category), :html => {:method => :get} do |f| %>
+                    <%= f.label :title_contains %>
+                    <%= f.text_field :title_contains %><%= f.submit %>
+                <%end%>
+            <%end%>
+    <%end%>
+<%if @store_products %>
+    <% @store_products.each do |product| %>
+        <div class="item_product" class="<%= product.type.name%>">
+            <div class="item_product_image" >
+                <%if product.image.url == "/images/original/missing.png" %>
+                    <%= image_tag(product.image_url)%>
+                <%else %>
+                    <%= image_tag(product.image.url)%>
+                <%end%>
+            </div>
+            <div class="item_product_text">
+                <div class="item_product_title">
+                    <h2><%= product.title %></h2>
+                </div>
+                <div class="item_product_description">
+                    <%= product.description %>
+                </div>
+            </div>
+            <div class="price">
+                Precio  <%= product.price %>€&nbsp;&nbsp;&nbsp; <%= link_to 'Show', store_path(product.id), :class => 'esd'%>
+            </div>
+            <%if user_signed_in? %> 
+                <%= button_to 'Add Order', line_items_path(:product_id => product) %>
+            <%end%>
+        </div>
+    <%end%>
 <%else%>
 
-  <%= "We have no products available" %>
+  <%="We have no products available" %>
 
 <%end%>
 

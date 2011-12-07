@@ -33,7 +33,7 @@
     height: 105px;
 }
 .hmenu{
-    color: green;
+    color: #880000;
 }
 
 ul.hmenu li{
@@ -47,7 +47,7 @@ ul.hmenu li{
 }
 
 .hmenu a.hover {
-    color: green;
+    color: black;
 }
 
 .hmenu a{
@@ -62,16 +62,16 @@ ul.hmenu li{
     font-family: "helveticaRd",helvetica,arial,sans-serif;
 }
 
-.cat {
+.cat{
     background-image: url(menucito.png);
     background-repeat: no-repeat;
     float:left;
     margin-left: 16px;
     margin-bottom: 10px;
     width: 150px;
-    height: 52px;
+    height: 53px;
     text-align:center;
-    line-height:50px;
+    line-height:52px;
 }
 
 #cat{
@@ -81,12 +81,34 @@ ul.hmenu li{
     margin-left: 0px;
     margin-bottom: 10px;
     width: 150px;
-    height: 52px;
+    height: 53px;
     text-align:center;
-    line-height:50px;
+    line-height:52px;
 }
 
-#current_order a {
+#cat:hover {
+    background-position: bottom;
+}
+
+.cat:hover {
+    background-position: bottom;
+}
+
+ 
+#cat a, .cat a{
+ color: #880000;
+}
+#cat:hover a{
+ color: #FFF;
+}
+
+.cat:hover a{
+    color: #FFF;
+}
+
+#curr {
+  margin-top: 5px;
+  float:right;
   background-image: url('order.png');
   background-position: top;
   background-repeat: no-repeat;
@@ -95,16 +117,21 @@ ul.hmenu li{
   text-align: center;
   line-height: 50px;
 } 
-#current_order a:hover {
+
+.current_order {
+    float: left;
+    background:#FFF;
+}
+.curr:hover {
   background-position: bottom;
 }
-
-#menu a:hover {
-    color: green;
+.curr:hover a {
+    color: #FFF;
 }
-
-#menu a{
-    color: #880000;
+.search{
+    margin-top: 20px;
+ float:left;
+ width:500px;
 }
 
 #admin_menu{
@@ -140,6 +167,7 @@ margin-left:10px;
 margin-right:10px;
 }
 .esd {
+    margin-left: 10px;
     text-decoration: none;
     color: #880000;
 }

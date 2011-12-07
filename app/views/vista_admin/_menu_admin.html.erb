@@ -6,5 +6,6 @@
         <%= link_to 'Products', products_path%>
         <%= link_to 'Groups', ugroupes_path%>
         <%= link_to 'Orders', corders_path%>
+        <%=(link_to 'Current order', order_path(current_order)) if current_order%>
     </div>
 </div>
