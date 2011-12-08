@@ -21,7 +21,7 @@ gem "ckeditor", "~> 3.6.1"
 
 gem 'jquery-rails'
 # Ajax para el yield
-gem 'pjax_rails'
+gem 'pjax_rails', "~> 0.1.10"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 #paginate elements

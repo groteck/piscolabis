@@ -4,10 +4,15 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//=require pjax
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
 
 $(document).ready( function(){ 
     setInterval(function(){ $('#refresh').load('/cocinero_ajax'); }, 3000);})
+$(function(){
+      // Activate PJAX on ul.menu links
+      //   // Response will be loaded into #main element on the page
+           $('.menu_l').pjax('#yield')
+           $('.admin_cat a').pjax('#yield')
+            })

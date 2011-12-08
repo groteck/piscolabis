@@ -51,6 +51,6 @@
     <%= select("product", "type_id", 
         Type.all.collect {|p| [ p.name, p.id ] },
         {:include_blank => 'Select type'})%>
-    <%= f.submit %>
+     <%= f.submit %>
   </td></tr></table>
 <% end %>
