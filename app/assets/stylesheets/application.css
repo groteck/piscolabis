@@ -7,8 +7,8 @@
  */
 /**** Codigo mio ^^ ****/
 .body_full{
- margin: 0, auto;
- width:100%;
+  margin: 0, auto;
+  width:100%;
 }
 
 #head, #body, #footer {
@@ -17,110 +17,108 @@
  }
 
 #logo {
-    top: 0px;
-    width: 980px;
-    height: 105px;
-    float: left;
-    background-image: url(logo.png);}
+  top: 0px;
+  width: 980px;
+  height: 105px;
+  float: left;
+  background-image: url(logo.png);}
 
 #body {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 #head {
-    height: 105px;
+  height: 105px;
 }
 .hmenu{
-    color: #880000;
+  color: #880000;
 }
 
 ul.hmenu li{
-    font-color: #880000;
-    display: inline;
-    float: right;
-    margin: 10px;
-    font-family: "helveticaRd",helvetica,arial,sans-serif;
-    font-size: 15px;
-    font-weight: bold;
+  font-color: #880000;
+  display: inline;
+  float: right;
+  margin: 10px;
+  font-family: "helveticaRd",helvetica,arial,sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .hmenu a.hover {
-    color: black;
+  color: black;
 }
 
 .hmenu a{
-    color: #880000;}
+  color: #880000;}
 
 
 /*** MENU ***/
 
 #menu {
-    width: 100%;
-    height:52px;
-    font-weight: bold;
-    font-size:14px;
-    font-family: "helveticaRd",helvetica,arial,sans-serif;
+  width: 100%;
+  height:52px;
+  font-weight: bold;
+  font-size:14px;
+  font-family: "helveticaRd",helvetica,arial,sans-serif;
 }
 
 #tabla {
-    border-style: none;
+  border-style: none;
 }
 
 #prod {
-    border-style: none;
-    text-align: left;
+  border-style: none;
+  text-align: left;
 }
 
 .cat{
-    background-image: url(menucito.png);
-    background-repeat: no-repeat;
-    float:left;
-    margin-left: 16px;
-    margin-bottom: 10px;
-    width: 150px;
-    height: 53px;
-    text-align:center;
-    line-height:52px;
+  background-image: url(menucito.png);
+  background-repeat: no-repeat;
+  float:left;
+  margin-left: 16px;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 53px;
+  text-align:center;
+  line-height:52px;
 }
 
 #cat{
-    background-image: url(menucito.png);
-    background-repeat: no-repeat;
-    float:left;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    width: 150px;
-    height: 53px;
-    text-align:center;
-    line-height:52px;
+  background-image: url(menucito.png);
+  background-repeat: no-repeat;
+  float:left;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 53px;
+  text-align:center;
+  line-height:52px;
 }
 
 #cat:hover {
-    background-position: bottom;
+  background-position: bottom;
 }
 
 .cat:hover {
-    background-position: bottom;
+  background-position: bottom;
 }
 
 #cat a, .cat a{
- color: #880000;
- 
- display: block;
- 
+  color: #880000;
+  display: block; 
 }
 #cat:hover a{
- color: #FFF;
+  color: #FFF;
 }
 
 .cat:hover a{
-    color: #FFF;
+  color: #FFF;
 }
 
 .current_order{
-    float: left;
-    width: 100%;
-    background: #FFF;
+  float: left;
+  width: 100%;
+  background: #FFF;
 }
 
 .curr {
@@ -135,161 +133,175 @@ ul.hmenu li{
 }
 
 .curr a{
-    font-weight: bold;
-    color: #880000;
-    display: block;
+  font-weight: bold;
+  color: #880000;
+  display: block;
 }
 
 .curr:hover {
   background-position: bottom;
 }
 .curr:hover a {
-    color: #FFF;
+  color: #FFF;
 }
 .search{
-    margin-left: 15px;
-    margin-top: 20px;
-    float:left;
+  margin-left: 15px;
+  margin-top: 20px;
+  float:left;
 }
 
 #admin_menu{
-    float:left;
-    width:100%;
-    background-color: #FFF;
+  float:left;
+  width:100%;
+  background-color: #FFF;
 }
 .admin_cat {
-    float: left;
-    height:40px;
-    padding-top: 5px;
+  float: left;
+  height:40px;
+  padding-top: 5px;
 }
 .admin_cat a {
-    padding-left:10px;
-    padding-right:5px;
-    color: #880000;
+  padding-left:10px;
+  padding-right:5px;
+  color: #880000;
 }
 .admin_cat a:hover {
-    color: black;
+  color: black;
 }
 
 /*** CUERPO PRODUCTOS ***/
 table {
-    width: 70%;
-    border-style:solid;
-    margin-left:15%;
-    margin-right:10px;
-    text-align:center;
-    font-size: 16px;
+  width: 70%;
+  border-style:solid;
+  margin-left:15%;
+  margin-right:10px;
+  text-align:center;
+  font-size: 16px;
 }
 
 .esd {
-    margin-left: 10px;
-    text-decoration: none;
-    color: #880000;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #880000;
 }
 .esd:hover {
-    color:black;
+  color:black;
 }
 #content {
-    margin 0, auto;
+  margin 0, auto;
 }
 
 #products_head {
-    float: left;
-    width: 980px;
-    height: 39px;
-    background: url(products_head.png);
-    position: relative;
-    font-family: "helveticaRd",helvetica,arial,sans-serif;
+  float: left;
+  width: 980px;
+  height: 39px;
+  background: url(products_head.png);
+  position: relative;
+  font-family: "helveticaRd",helvetica,arial,sans-serif;
 }
 
 #products_head h1 {
-    float: left;
-    width: 960px;
-    color:#B80000;
-    padding-bottom: 0px;
-    padding-left: 16px;
-    padding-top: 4px;
-    text-transform: uppercase;
-    font-size: 15px;
+  float: left;
+  width: 960px;
+  color:#B80000;
+  padding-bottom: 0px;
+  padding-left: 16px;
+  padding-top: 4px;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 #yield{
-    padding-top: 10px;
-    float: left;
-    width: 100%;
-    background-color: #FFF;
+  padding-top: 10px;
+  float: left;
+  width: 100%;
+  background-color: #FFF;
 }
 #products_list{
-    min-height:450px;
-    padding-left: 5px;
-    padding-bottom: 6px;
+  min-height:450px;
+  padding-left: 5px;
+  padding-bottom: 6px;
 }
 .pagination {
-    width: 100%; 
-    text-align: center; 
+  width: 100%; 
+  text-align: center; 
 }
 #products_footer {
-    float: left;
-    width: 980px;
-    height: 10px;
-    background: url(products_footer.png);
-    position: relative;
-    margin-bottom: 16px;
+  float: left;
+  width: 980px;
+  height: 10px;
+  background: url(products_footer.png);
+  position: relative;
+  margin-bottom: 16px;
 }
 
 /*** VISTA DE PRODUCTOS ***/
 
 .item_product {
-    float: left;
-    width: 178px;
-    height: 350px;
-    margin-left: 5px;
-    margin-right: 10px;
-    margin-top: 15px;
+  float: left;
+  width: 178px;
+  height: 320px;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-top: 15px;
 }
 
 .item_product_image img {
-    float: center;
-    width: 178px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  max-height: 133px;
 }
 
+
+.item_product_image {
+width: 178px;
+height : 138px;
+max-height: 138px;
+}
 
 .item_product_text {
-    float: right;
-    width: 178px;
-    font-size: 11px;
-    font-family: "helveticaRd",helvetica,arial,sans-serif;
+  width: 178px;
+  font-size: 13px;
+  font-family: "helveticaRd",helvetica,arial,sans-serif;
 }
 .item_product_text h2 {
-    font-size: 15px;
-    padding-top: 10px;
-    margin-bottom: 0px;
-    color:#B80000;
-    float: left;
-    width: 100%;
+  font-size: 15px;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  color:#B80000;
+  width: 100%;
+}
+
+.item_product_title {
+  height: 44px;
+  text-align:center;
 }
 
 .item_product_description {
-    width: 100%;
-    float: left;
-    padding-top: 5px;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 78px;
+  max-height:78px;
+  padding-top: 5px;
+
 }
 .price {
-    width: 100%;
-    margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 13px;
 }
 
 #store {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .new {
-    margin-left: 7px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-left: 7px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-/*** FOOTER ***/
+  /*** FOOTER ***/
 #center_footer, #footer_image {
   width: 100%;
   float: left;

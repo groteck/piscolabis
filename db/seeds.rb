@@ -31,3 +31,29 @@ user.password_confirmation = 'cocinero'
 user.ugroupe_id= 2
 user.save
 
+User.new(:email=>'usuario@usuario.com', :password=>'usuario', :password_confirmation =>'usuario', :first_name=>'usuario', :second_name=>'normal', :adress=>'calle de usuario', :phone=> 555666777).save
+
+
+Product.new(:image_url=>'aceituna.jpg', :title=>'Sandwich de aceitunas', :description =>'<p>Sandwich con deliciosas aceitunas molidas, con pimiento, mayonesa, atun y guisantes.</p>', :price=> 1.50, :available=> true, :type_id=> 1).save
+
+Product.new(:image_url=>'aguacate.jpg', :title=>'Sandwich de aguacate', :description =>'<p>Sandwich hecho con crema de aguacate.</p>', :price=>1.50, :available=> true, :type_id=>1).save
+
+Product.new(:image_url=>'atun_y_millo.jpg', :title=>'Sandwich de atun y millo', :description =>'<p>Sandwich tipico de canarias, atun, millo y mayonesa.</p>', :price=>1.50, :available=> true, :type_id=>1).save
+
+Product.new(:image_url=>'batata_y_pasas.jpg', :title=>'Truchas de batata y pasas', :description =>'<p>Truchas caseras hechas de batata molida y pasas.</p>', :price=>2.50, :available=> true, :type_id=>5).save
+
+Product.new(:image_url=>'galletas_caseras.jpg', :title=>'Galletas caseras', :description =>'<p>Deliciosas Galletas caseras, horneadas y glaseadas a mano.</p>', :price=>2, :available=> true, :type_id=>5).save
+
+Product.new(:image_url=>'pack.jpg', :title=>'Bandeja variada', :description =>'<p>Bandeja con una seleccion de nustros mejores productos</p>', :price=>10.50, :available=> true, :type_id=>1).save
+
+Product.new(:image_url=>'pimientos_con_atun.jpg', :title=>'Sandwich de pimientos y atun', :description =>'<p>Sandwich de pimientos, atun y huevo.</p>', :price=>1.5, :available=> true, :type_id=>1).save
+
+Product.new(:image_url=>'rollito_de_gambas.jpg', :title=>'Rollito de gambas al ajillo', :description =>'<p>Delicioso pan de sandwich enrrollado con gambas al ajillo molidas y mayonesa.</p>', :price=>2, :available=> true, :type_id=>4).save
+
+Product.new(:image_url=>'rollitos_de_pollo.jpg', :title=>'Rollito de pollo al ajillo', :description =>'<p>Delicioso poyo asado molido al ajillo con mayonesa.</p>', :price=>2, :available=> true, :type_id=>4).save
+
+Product.new(:image_url=>'atun_vegetal.jpg', :title=>'Sandwich de atun vegetal', :description =>'<p>delicioso sandwich de atun, huevo, tomate, lechuga y mayonesa.</p>', :price=>1.50, :available=> true, :type_id=>1).save
+
+Product.new(:image_url=>'vegetal.jpg', :title=>'Sandwich vegetal', :description =>'<p>Sandwich vegetal con huevo y mayonesa.</p>', :price=>1.50, :available=> true, :type_id=>1).save
+
+Product.new(:image_url=>'nodisponible.jpg', :title=>'Bocadillo especial', :description =>'<p>Bocadillo especial de la casa con verduras de calidad.</p>', :price=>2, :available=> true, :type_id=>2).save
