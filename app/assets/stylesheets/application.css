@@ -105,10 +105,9 @@ ul.hmenu li{
 
 #cat a, .cat a{
  color: #880000;
- padding-left: 40px;
- padding-right: 40px;
- padding-top: 18px;
- padding-bottom: 18px;
+ 
+ display: block;
+ 
 }
 #cat:hover a{
  color: #FFF;
@@ -136,11 +135,9 @@ ul.hmenu li{
 }
 
 .curr a{
+    font-weight: bold;
     color: #880000;
-    padding-top: 15px;
-    padding-bottom: 17px;
-    padding-left: 36px;
-    padding-right:30px;
+    display: block;
 }
 
 .curr:hover {

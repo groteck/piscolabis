@@ -16,9 +16,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-#ckeditor
+# editor javascript ckeditor
 gem "ckeditor", "~> 3.6.1"
-
+# sanear html
+gem 'sanitize'
+# javascript
 gem 'jquery-rails'
 # Ajax para el yield
 gem 'pjax_rails'

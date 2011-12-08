@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :menu
+                  
   def menu
      @categories=Type.all
   end
@@ -8,12 +9,9 @@ class ApplicationController < ActionController::Base
   private
 
   def current_order
-    Order.find(session[:order_id])
-    rescue ActiveRecord::RecordNotFound
-      order = Order.create
-      session[:order_id] = order.id
-      order
+    Order.find(session[:order_id]) rescue nil
   end
+
   def current_user_admin
       if current_user == nil
          redirect_to root_path
@@ -23,6 +21,7 @@ class ApplicationController < ActionController::Base
             end
       end
   end
+
   def current_user_cooker
       if current_user == nil
           redirect_to root_path
@@ -32,8 +31,8 @@ class ApplicationController < ActionController::Base
           end
       end
   end
-  helper_method :current_order
 
+  helper_method :current_order
   helper_method :current_user_admin
   helper_method :current_user_cooker
 end

@@ -47,6 +47,8 @@ class ProductsController < ApplicationController
     if params[:product][:price] == ""
         params[:product][:price] = 0.00
     end
+    params[:product][:price] = Sanitize.clean(params[:product][:price], Sanitize::Config::RELAXED)
+
     @product = Product.new(params[:product])
   
     respond_to do |format|
@@ -73,6 +75,7 @@ class ProductsController < ApplicationController
       params[:product][:image_url] = "nodisponible.jpg"
     end
 
+    params[:product][:price] = Sanitize.clean(params[:product][:price], Sanitize::Config::RELAXED)
     respond_to do |format|
       if @product.update_attributes(params[:product])
         if params[:delete_file] == "1" or params[:product][:image_url] != "nodisponible.jpg"  

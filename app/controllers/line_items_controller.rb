@@ -42,6 +42,7 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
+    session[:order_id] = Order.create unless session[:order_id]
     @order = current_order
     product = Product.find(params[:product_id])
     @line_item = @order.add_product(product.id)
