@@ -1,24 +1,17 @@
 <%= form_for @my_user,:url => user_administration_path(@my_user) do |f| %>
-     <% if @my_user.errors.any? %>
-            <div id="error_explanation">    
-                     <h2><%= pluralize(@my_user.errors.count, "error") %> prohibited this ugroupe from being saved:</h2>
-
-                          <ul>
-                                   <% @my_user.errors.full_messages.each do |msg| %>
-                                              <li><%= msg %></li>
-                                                   <% end %>
-                                                        </ul>
-                                                           </div>
-                                                            <% end %>                    
-
-                                                             <div class="field">          
-                                                                    <%= f.label :ugroupe_id %><br />
-                                                                       <%= select("user", "ugroupe_id", 
-                                                                              Ugroupe.all.collect {|p| [ p.name, p.id ] },
-                                                                                     {:include_blank => 'Select type'})%>
-                                                                                      </div>
-
-                                                                                       <div class="actions">        
-                                                                                              <%= f.submit %>            
-                                                                                               </div>
-                                                                                           <% end %>
+    <% if @my_user.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@my_user.errors.count, "error") %> prohibited this ugroupe from being saved:</h2>
+            <ul>
+                <% @my_user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <div class="new">
+    <li>
+        <%= select("user", "ugroupe_id", Ugroupe.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'Select Group'})%>
+        <%= f.submit %>
+    </li></div>
+<% end %>

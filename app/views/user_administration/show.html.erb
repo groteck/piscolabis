@@ -15,6 +15,6 @@
     <td><%= @my_user.adress %></td>
     <td><%= @my_user.ugroupe.name %></td>
     <td><%= link_to 'Edit', edit_user_administration_path(@my_user), :class => 'esd' %></td>
-    <td><%= link_to 'Destroy', user_administration_path(@my_user), :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Back', :back, :class => 'esd' %></td>
   </tr>
 </table>

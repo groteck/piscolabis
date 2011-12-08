@@ -1,3 +1,4 @@
+<div class="new">
 <%= form_for(@ugroupe) do |f| %>
   <% if @ugroupe.errors.any? %>
     <div id="error_explanation">
@@ -11,11 +12,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <li>
     <%= f.text_field :name %>
-  </div>
-  <div class="actions">
       <%= f.submit %>
-  </div>
-<% end %>
+  </li>
+<% end %></div>

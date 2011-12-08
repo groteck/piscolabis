@@ -1,3 +1,4 @@
+
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -11,46 +12,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-<table>
-<tr>
-   <th><%= f.label 'Select image' %></th>
-   
-</tr>
-<tr>
-    <td>URL:<%= f.text_field :image_url %></td>
-    <td></td>
-<tr>
-    <td>or File:<%= f.file_field :image %></td>
-    <td>Delete current file: <input name="delete_file" type="hidden" value="0">
-        <input id="product_available" name="delete_file" type="checkbox" value="1">
-    </td>
-</tr>
-</table>
-  </div>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
+<div class="field">
+    <table>
+    <tr>
+        <th><%= f.label 'Select image' %></th>
+    </tr>
+    <tr>
+        <td>URL:<%= f.text_field :image_url %></td>
+        <td></td>
+    <tr>
+        <td>or File:<%= f.file_field :image %></td>
+        <td>Delete current file: <input name="delete_file" type="hidden" value="0">
+            <input id="product_available" name="delete_file" type="checkbox" value="1">
+        </td>
+    </tr>
+    </table>
+</div>
+
+  <table id="prod">
+  <tr>
+      <td> <%= f.label :title %>
+          <%= f.text_field :title %></td>
+  </tr>
+  <tr><td>
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
+    <%= f.cktext_area :description, :toolbar => 'description',:width => 400, :height => 250 %>
+  </tr></tr>
+  <tr><td>
     <%= f.label :price %>
     <%= f.text_field :price %>
-  </div>
-  <div class="field">
+  </td></tr>
+  <tr><td>
     <%= f.label :available %>
     <%= f.check_box :available %>
-  </div>
-  <div class="field">
+  </td></tr>
+  <tr><td>
     <%= f.label :type_id %>
     <%= select("product", "type_id", 
         Type.all.collect {|p| [ p.name, p.id ] },
         {:include_blank => 'Select type'})%>
-  </div>
-  <div class="actions">
     <%= f.submit %>
-  </div>
+  </td></tr></table>
 <% end %>
