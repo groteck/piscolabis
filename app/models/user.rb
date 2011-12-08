@@ -18,5 +18,6 @@ class User < ActiveRecord::Base
   belongs_to :ugroupe
   has_many :corders
   validates_presence_of :email, :password, :password_confirmation, :first_name, :second_name, :adress, :phone
-  validates :phone, :numericality => {:only_integer => true }
+  validates :phone, :numericality => {:only_integer => true }, :length => {:minimum => 9,:maximum => 12}
+  validate :email, :uniqueness => true
 end

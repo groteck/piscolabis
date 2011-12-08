@@ -7,7 +7,7 @@
     <% else%>
         <div class="current_order">
             <div class="curr">
-                <%=(link_to 'Current order', order_path(current_order), :class => 'esd') if current_order%>
+                <%=(link_to 'Current order', order_path(current_order)) if current_order%>
             </div>
             <div class="search">
                     <%=yield :search%>
@@ -19,6 +19,6 @@
             <%=yield :search%></div></div>
 <%end%>
 
-<div id="yield">
+<div data-pjax-container id="yield">
     <%= yield %>
 </div>

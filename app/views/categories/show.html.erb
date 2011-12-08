@@ -1,11 +1,10 @@
 <% content_for :cabecera do%>
-  Productos
+    Products
 <%end%>
 <%content_for :search do%>
     <%if current_user == nil or current_user.ugroupe_id != 1%>
         <%= form_for @search, :url => category_path(@category), :html => {:method => :get} do |f| %>
-        <%= f.label :title_contains %>
-        <%= f.text_field :title_contains %><%= f.submit %>
+        <%= f.text_field :title_contains %><%= f.submit 'Search Products' %>
     <% end %>
 <%end%>
 
@@ -14,8 +13,7 @@
     <%if user_signed_in?%>
         <%if current_user.ugroupe_id == 1%>
             <%= form_for @search, :url => category_path(@category), :html => {:method => :get} do |f| %>
-                <%= f.label :title_contains %>
-                <%= f.text_field :title_contains %><%= f.submit %>
+                <%= f.text_field :title_contains %><%= f.submit 'Search Product' %>
             <% end %>
         <%end%>
     <%end%>

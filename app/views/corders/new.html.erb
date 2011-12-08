@@ -48,9 +48,13 @@
   </td>
 </tr>
 </table>
-
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+        <table id="tabla">
+            <tr>
+                <td><%= f.submit 'Are you agree with your personal information?' %></td>
+                <td> <%= button_to 'Do you want change your personal information?', edit_user_registration_path, %></td>
+            </tr>
+        </table>
   </div>
 <% end %>
 <%end%>

@@ -1,0 +1,24 @@
+<% content_for :cabecera do%>
+  Listing Orders
+<%end%>
+
+<table>
+    <tr>
+    <th>Num Pedido</th>
+    <th>Ver Pedido</th>
+    <th>Finalizar Pedido</th>
+    <th>Cancelar Pedido</th>
+  </tr>
+<% if @corders %>
+<% @corders.each do |corder| %>
+    <tr>
+    <td><%= corder.id %></td>
+    <td><%= button_to 'Show', corder, :class => 'esd', :method => :get %></td>
+    <td><%= form_for corder do |c|%>
+        <%= c.submit%><%end%>
+    </td>
+    <td><%= button_to 'Cancel', corder, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+<%end%>
+</table>

@@ -2,14 +2,7 @@
   Listing Groups<%end%>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @ugroupes.each do |ugroupe| %>
+  <% @ugroupes.each do |ugroupe| %>
   <tr>
     <td><%= ugroupe.name %></td>
     <td><%= link_to 'Show', ugroupe, :class => 'esd' %></td>
@@ -21,4 +14,4 @@
 
 <br />
 
-<%= link_to 'New Ugroupe', new_ugroupe_path, :class => 'esd' %>
+<%= link_to 'New Group', new_ugroupe_path, :class => 'esd' %>

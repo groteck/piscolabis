@@ -44,15 +44,15 @@ class ProductsController < ApplicationController
     if params[:product][:image_url] == ""
        params[:product][:image_url] = "nodisponible.jpg"
     end
+    if params[:product][:price] == ""
+        params[:product][:price] = 0.00
+    end
     @product = Product.new(params[:product])
   
     respond_to do |format|
       if @product.save
-        if params[:delete_file] == 1
-          @product.image_file_name = nil
-          @product.image_content_type = nil
-          @product.image_file_size = nil
-          @product.image_updated_at = nil
+        if params[:delete_file] == "1"
+          @product.image = nil
           @product.save
         end
 
@@ -75,11 +75,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.update_attributes(params[:product])
-        if params[:delete_file] == 1 or params[:product][:image_url] != "nodisponible.jpg"  
-           @product.image_file_name = nil
-           @product.image_content_type = nil
-           @product.image_file_size = nil
-           @product.image_updated_at = nil
+        if params[:delete_file] == "1" or params[:product][:image_url] != "nodisponible.jpg"  
+           @product.image = nil
            @product.save
         end 
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }

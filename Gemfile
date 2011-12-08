@@ -17,7 +17,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+# Ajax para el yield
+gem 'pjax_rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 #paginate elements

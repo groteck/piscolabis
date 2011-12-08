@@ -3,9 +3,8 @@
 <%end%>
 <%content_for :search do%>
     <%if current_user == nil or current_user.ugroupe_id != 1%>
-        <%= form_for @search, :url => products_path(@category), :html => {:method => :get} do |f| %>
-            <%= f.label :title_contains %>
-            <%= f.text_field :title_contains %><%= f.submit %>
+        <%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
+            <%= f.text_field :title_contains %><%= f.submit 'Search Products' %>
         <%end%>
     <%end%>
 <%end%>
@@ -14,15 +13,14 @@
 <div id="products_list">
     <%if  user_signed_in?%>
         <%if current_user.ugroupe_id == 1%>
-                <%= form_for @search, :url => products_path(@category), :html => {:method => :get} do |f| %>
-                    <%= f.label :title_contains %>
-                    <%= f.text_field :title_contains %><%= f.submit %>
+                <%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
+                    <%= f.text_field :title_contains %><%= f.submit 'Search Products' %>
                 <%end%>
             <%end%>
     <%end%>
 <%if @store_products %>
     <% @store_products.each do |product| %>
-        <div class="item_product" class="<%= product.type.name%>">
+        <div class="item_product">
             <div class="item_product_image" >
                 <%if product.image.url == "/images/original/missing.png" %>
                     <%= image_tag(product.image_url)%>

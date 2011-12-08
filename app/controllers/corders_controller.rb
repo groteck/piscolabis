@@ -1,6 +1,6 @@
 class CordersController < ApplicationController
   before_filter :authenticate_user!, :only => [ :show, :create, :new ]
-  before_filter :current_user_cooker, :only => [ :cocinero, :update, :destroy ]
+  before_filter :current_user_cooker, :only => [ :cocinero, :cocinero_ajax, :update, :destroy ]
   # GET /orders
   # GET /orders.json
   def index
@@ -20,10 +20,19 @@ class CordersController < ApplicationController
     end
   end
 
+  def cocinero_ajax
+    @corders = Corder.where(:finished => false).all
+        respond_to do |format|
+        format.html { render :layout => false }
+        format.json { render json: @corders }
+    end
+  end
+
+
   def show
   
     @corder = Corder.find(params[:id])
-    unless @corder.user_id != current_user.id or current_user.ugroupe_id < 2
+    unless @corder.user_id == current_user.id or current_user.ugroupe_id < 2
       redirect_to root_path, notice: 'Estos no son los productos que buscas.'
     end
   end
@@ -42,7 +51,7 @@ class CordersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @corder = Corder.new(:finished => 0,:user_id => current_user, :order_id => session[:order_id])
+    @corder = Corder.new(:finished => 0,:user_id => current_user.id, :order_id => session[:order_id])
     
       respond_to do |format|
       if @corder.save
@@ -74,8 +83,8 @@ class CordersController < ApplicationController
     @corder.destroy
 
     respond_to do |format|
-      format.html { redirect_to root_url,notice: 'order whitout products' }
-      format.json { head :ok }
+            format.html { redirect_to :back}
+        format.json { head :ok }
     end
   end
 end
