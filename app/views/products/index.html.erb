@@ -11,7 +11,7 @@
     <th></th>
     <th></th>
     <th></th>
-  </tr>
+</tr>
 <% @products.each do |product| %>
   <tr>
     <td><%= product.title %></td>
@@ -20,7 +20,7 @@
     <td><%= product.type.name %></td>
     <td><%= link_to 'Show', product, :class => 'esd' %></td>
     <td><%= link_to 'Edit', edit_product_path(product), :class => 'esd' %></td>
-    <td><%= link_to 'Destroy', product, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete', product, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

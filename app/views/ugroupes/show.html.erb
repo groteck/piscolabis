@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="new">
   <b>Name:</b>
   <%= @ugroupe.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_ugroupe_path(@ugroupe) %> |
-<%= link_to 'Back', ugroupes_path %>
+<%= link_to 'Edit', edit_ugroupe_path(@ugroupe), :class => 'esd' %> |
+<%= link_to 'Back', ugroupes_path, :class => 'esd' %>

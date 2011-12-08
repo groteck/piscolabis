@@ -5,7 +5,14 @@ class ApplicationController < ActionController::Base
   def menu
      @categories=Type.all
   end
-
+  #We don't want to render the layout if PJAX is working
+    def render(options = nil, extra_options = {}, &block)
+        if request.headers['X-PJAX'] == 'true'
+              options = {} if options.nil?
+                    options[:layout] = false 
+                        end
+                            super(options, extra_options, &block)
+                              end
   private
 
   def current_order
