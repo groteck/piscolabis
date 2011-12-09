@@ -15,7 +15,7 @@
     <td><%= corder.id %></td>
     <td><%= button_to 'Show', corder, :class => 'esd', :method => :get %></td>
     <td><%= form_for corder do |c|%>
-        <%= c.submit%><%end%>
+            <%= c.submit :class =>'esd'%><%end%>
     </td>
     <td><%= button_to 'Cancel', corder, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
   </tr>

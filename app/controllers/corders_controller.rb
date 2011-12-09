@@ -69,7 +69,7 @@ class CordersController < ApplicationController
     @corder = Corder.find(params[:id])
     respond_to do |format|
       if @corder.update_attributes(:finished => true)
-        format.html { redirect_to @corder, notice: 'Order was successfully updated.' }
+        format.html { redirect_to :back }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

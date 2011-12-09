@@ -301,6 +301,14 @@ max-height: 138px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.pagina {
+    margin-top: 15px;
+    float:left;
+    width: 100%;
+    height: 18px;
+    text-align: center
+}
   /*** FOOTER ***/
 #center_footer, #footer_image {
   width: 100%;
