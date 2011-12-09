@@ -5,6 +5,9 @@
       &nbsp;&nbsp;&nbsp; <%= link_to('Pedidos', :action=>"cocinero", :controller=>"corders") %>
   <%end%>
   </li>
+  <li>
+    <%= link_to('Order Status', :action => "order_state", :controller=>"store") if current_user.corders%>
+  </li>
 <% else %>
   <li>
   <%= link_to('Register', new_user_registration_path)  %>

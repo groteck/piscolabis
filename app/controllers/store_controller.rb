@@ -18,6 +18,7 @@ class StoreController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @corders }
     end
+   end
    def corders
     time = Time.now - 1.day
     @corders = current_user.corders.where("created_at > ?", time)
@@ -27,4 +28,3 @@ class StoreController < ApplicationController
     end
   end
  end
-end
