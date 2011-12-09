@@ -1,6 +1,6 @@
 class StoreController < ApplicationController
   def index
-    @search = Product.search(params[:search])
+    @search = Product.where("available = ?", true).search(params[:search])
     @store_products = @search.paginate(:page => params[:page], :per_page => 10)
   end
   def show
