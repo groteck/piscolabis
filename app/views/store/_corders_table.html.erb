@@ -1,12 +1,9 @@
-<% content_for :cabecera do%>
-  Listing Orders
-<%end%>
+
 <table>
     <tr>
     <th>Num Pedido</th>
     <th>Estado</th>
     <th>Ver Pedido</th>
-    <th>Cancelar Pedido</th>
   </tr>
 <% if @corders %>
 <% @corders.each do |corder| %>
@@ -20,7 +17,6 @@
       <%end %>
     </td>
     <td><%= link_to 'Show', corder, :class => 'esd' %></td>
-    <td><%= link_to 'Cancel', corder, :class => 'esd', confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 <%end%>
