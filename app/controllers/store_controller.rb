@@ -11,4 +11,20 @@ class StoreController < ApplicationController
       format.json { render json: @store_product }
     end
   end
+  def order_state
+    time = Time.now - 1.day
+    @corders = current_user.corders.where("created_at > ?", time)
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @corders }
+    end
+   def corders
+    time = Time.now - 1.day
+    @corders = current_user.corders.where("created_at > ?", time)
+    respond_to do |format|
+      format.html { render :layout => false }
+      format.json { render json: @corders }
+    end
+  end
+ end
 end

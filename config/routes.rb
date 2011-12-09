@@ -19,6 +19,8 @@ Piscolabis::Application.routes.draw do
 
   resources :store
   root :to => 'store#index'
+  match 'my_orders' => 'store#order_state', :via => :get
+  match 'my_orders_ajax' => 'store#corders', :via => :get
   resources :types
 
 

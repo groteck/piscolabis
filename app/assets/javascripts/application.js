@@ -10,6 +10,8 @@
 
 $(document).ready( function(){ 
     setInterval(function(){ $('#refresh').load('/cocinero_ajax'); }, 3000);})
+$(document).ready( function(){ 
+    setInterval(function(){ $('#my_orders').load('/my_orders_ajax'); }, 3000);})
 $(function(){
       // Activate PJAX on ul.menu links
       //   // Response will be loaded into #main element on the page
